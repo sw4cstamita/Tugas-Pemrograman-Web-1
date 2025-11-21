@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align:center;">
+    <button onclick="tekanPause()">Play/Pause</button>
+    <button onclick="menjadiBig()">Big</button>
+    <button onclick="menjadiSmall()">Small</button>
+    <button onclick="menjadiNormal()">Normal</button>
+    <br><br>
+    <video id="videoku" width="430".
+    <source src="Videoku.mp4" type="video/mp4">
+    <source src="Videoku.mp4" type="video/mp4">
+    Browser anda tidak suppport video HTML 5.</video>
+    </div>
+</body>
+<script>
+    var Videoku = document.getElementById("videoku");  
+     function tekanPause() {  
+      if (Videoku.paused)  
+        Videoku.play();  
+      else  
+        Videoku.pause();  
+    }  
+     function menjadiBig() {  
+        Videoku.width = 560; 
+    }  
+     function menjadiSmall() {  
+        Videoku.width = 320;  
+    }  
+     function menjadiNormal() {  
+        Videoku.width = 430;  
+    }  
+    </script>
+</html>
