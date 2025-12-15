@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.window {
+  width: 600px;
+  margin: 40px auto;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.title-bar {
+  background-color: #ddd;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+
+.content {
+  padding: 30px 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 60px 10px;
+  font-weight: bold;
+}
+
+.row-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 25px;
+}
+
+input[type="number"] {
+  width: 200px;
+  padding: 5px;
+}
+
+select {
+  padding: 5px;
+}
+
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#result {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 24px; /* tempat hasil supaya tidak geser */
+}
+
+.credit {
+  margin-top: 5px;
+  font-size: 14px;
+}
