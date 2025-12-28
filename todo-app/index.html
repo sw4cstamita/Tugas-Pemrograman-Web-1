@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sat Set Done ⚡</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1>TO DO LIST</h1>
+            <p>Hajar tugasmu hari ini, jangan kasih kendor! 🔥</p>
+        </header>
+
+        <div class="input-area">
+            <input type="text" id="todo-input" placeholder="Tulis target hari ini... 🎯">
+            <button id="add-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+
+        <div id="empty-state" class="hidden">
+            <div class="empty-icon">🏖️</div>
+            <h3>Waduh, Kosong Melompong!</h3>
+            <p>Lagi gabut ya? Tambahin tugas dulu gih.</p>
+        </div>
+
+        <ul id="todo-list">
+            </ul>
+        
+        <div class="stats">
+            <span><i class="fas fa-layer-group"></i> Sisa: <strong id="count">0</strong> tugas</span>
+            <button id="clear-btn" onclick="clearAll()">Bersihkan Semua 🧹</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

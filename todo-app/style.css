@@ -1,0 +1,182 @@
+/* Variabel Warna Biar Konsisten */
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --bg: #f3f4f6;
+    --text: #1f2937;
+    --danger: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container Utama */
+.main-container {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+button#add-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+button#add-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* List Items */
+ul { list-style: none; }
+
+li {
+    background: #fff;
+    border-bottom: 1px solid #f3f4f6;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Animasi Masuk */
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+/* Kustomisasi Teks & Waktu */
+.task-details {
+    flex: 1;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.task-text {
+    display: block;
+    font-weight: 600;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.task-time {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+/* Tombol Aksi */
+.action-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.check-btn { color: #d1d5db; font-size: 1.2rem; }
+.delete-btn { color: var(--danger); opacity: 0; pointer-events: none; }
+
+/* Efek Hover di List */
+li:hover .delete-btn {
+    opacity: 1;
+    pointer-events: auto;
+    background: #fee2e2;
+}
+
+/* State Selesai (Completed) */
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #d1d5db;
+}
+li.completed .check-btn {
+    color: #10b981; /* Hijau Sukses */
+}
+
+/* Empty State */
+#empty-state {
+    text-align: center;
+    padding: 30px 0;
+    color: #9ca3af;
+}
+.empty-icon { font-size: 3rem; margin-bottom: 10px; }
+.hidden { display: none; }
+
+/* Footer */
+.stats {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px dashed #f3f4f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+#clear-btn {
+    background: none;
+    border: none;
+    color: var(--danger);
+    cursor: pointer;
+    font-weight: 600;
+}
+#clear-btn:hover { text-decoration: underline; }
+
+/* Keyframes Animation */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
